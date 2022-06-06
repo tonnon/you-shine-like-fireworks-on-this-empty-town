@@ -1,0 +1,133 @@
+html, body {
+	margin: 0;	
+	padding: 0;
+}
+
+body {
+	background: #171717;
+	color: #999;
+}
+
+#canvas-container {
+    position: absolute;
+    height: auto;
+	left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%); 
+    width: 900px;
+	z-index: 2;
+}
+		
+canvas {
+    position: absolute;
+	left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%); 
+    opacity: 0.5;
+}
+
+#skyline {
+	background: url(https://jackrugile.com/lab/fireworks-v2/images/skyline.png) repeat-x 50% 0;
+	bottom: 0;
+	height: 135px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;	
+}
+
+#mountains1 {
+	background: url(https://jackrugile.com/lab/fireworks-v2/images/mountains1.png) repeat-x 40% 0;
+	bottom: 0;
+	height: 200px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;	
+}
+
+#mountains2 {
+	background: url(https://jackrugile.com/lab/fireworks-v2/images/mountains2.png) repeat-x 30% 0;
+	bottom: 0;
+	height: 250px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;	
+}
+
+.buildings{
+    transition: all 0.3s ease;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+#city-sky{
+    transform-origin: 580px 429px;
+    animation-name: sky;
+    transition: all 0.3s ease;
+    animation-duration: 800s;
+    animation-timing-function: linear;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+#city-l0{
+    animation-name: l0;
+}
+#city-l1{
+    animation-name: l1;
+}
+#city-l2{
+    animation-name: l2;
+}
+#city-l3{
+    animation-name: l3;
+}
+#city-l4{
+    animation-name: l4;
+}
+#city-l5{
+    animation-name: l5;
+}
+
+@keyframes l0 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-6px) translateZ(0); }
+    75% { transform: translateX(4px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
+}
+@keyframes l1 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-10px) translateZ(0); }
+    75% { transform: translateX(10px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
+}
+@keyframes l2 {
+    0%   { transform: translateX(40px) translateZ(0); }
+    25% { transform: translateX(-12px) translateZ(0); }
+    75% { transform: translateX(85px) translateZ(0); }
+    100% { transform: translateX(40px) translateZ(0); }
+}
+@keyframes l3 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-48px) translateZ(0); }
+    75% { transform: translateX(80px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
+}
+@keyframes l4 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-50px) translateZ(0); }
+    75% { transform: translateX(82px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
+}
+@keyframes l5 {
+    0%   { transform: translateX(0) translateZ(0); }
+    25% { transform: translateX(-258px) translateZ(0); }
+    75% { transform: translateX(294px) translateZ(0); }
+    100% { transform: translateX(0px) translateZ(0); }
+}
+@keyframes sky {
+    0%   { transform: rotate(0deg) translateZ(0); }
+    100% { transform: rotate(360deg) translateZ(0); }
+}
